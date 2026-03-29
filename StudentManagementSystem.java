@@ -33,5 +33,14 @@ public class StudentManagementSystem {
             System.out.println(s);
         }
     }
+
+    public static Student searchById(int id) {
+        for (Student s : students) {
+            if (s.getId() == id) {
+                return s;
+            }
+        }
+        return null; // not found
+    }
 }
 
