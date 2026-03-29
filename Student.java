@@ -32,4 +32,8 @@ public class Student {
     public void setMarks(double marks) {
         this.marks = marks;
     }
+
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Marks: " + marks;
+    }
 }
