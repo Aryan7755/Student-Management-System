@@ -60,7 +60,7 @@ public class StudentManagementSystem {
             System.out.println("Invalid marks! Must be between 0 and 100.");
             return;
         }
-        if (id < 0) {
+        if (id <= 0) {
             System.out.println("Invalid Id! Must be greater than 0.");
             return;
         }
@@ -72,5 +72,8 @@ public class StudentManagementSystem {
         s.setMarks(marks);
         System.out.println("Marks updated successfully!");
     }
+
+
+
 }
 
