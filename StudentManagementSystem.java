@@ -54,5 +54,23 @@ public class StudentManagementSystem {
         }
         return result;
     }
+
+    public static void updateMarksById(int id , double marks) {
+        if (marks < 0 || marks > 100) {
+            System.out.println("Invalid marks! Must be between 0 and 100.");
+            return;
+        }
+        if (id < 0) {
+            System.out.println("Invalid Id! Must be greater than 0.");
+            return;
+        }
+        Student s = searchById(id);
+        if (s == null) {
+            System.out.println("Student not found!");
+            return;
+        }
+        s.setMarks(marks);
+        System.out.println("Marks updated successfully!");
+    }
 }
 
