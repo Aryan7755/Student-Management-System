@@ -20,4 +20,16 @@ public class Student {
     public double getMarks() {
         return marks;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMarks(double marks) {
+        this.marks = marks;
+    }
 }
