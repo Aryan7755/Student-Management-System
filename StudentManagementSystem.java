@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class StudentManagementSystem {
@@ -41,6 +42,17 @@ public class StudentManagementSystem {
             }
         }
         return null; // not found
+    }
+
+    public static List<Student> searchByName(String name) {
+        List<Student> result = new ArrayList<>();
+
+        for (Student s : students) {
+            if (s.getName().equalsIgnoreCase(name)) {
+                result.add(s);
+            }
+        }
+        return result;
     }
 }
 
