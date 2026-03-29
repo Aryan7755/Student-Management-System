@@ -21,4 +21,17 @@ public class StudentManagementSystem {
 
         System.out.println("✅ Student added successfully!");
     }
+
+    public static void displayStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+            return;
+        }
+
+        System.out.println("\nStudent List:");
+        for (Student s : students) {
+            System.out.println(s);
+        }
+    }
 }
+
