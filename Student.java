@@ -8,4 +8,16 @@ public class Student {
         this.name = name;
         this.marks = marks;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
 }
