@@ -11,7 +11,9 @@ public class Main {
             System.out.println("2. Display Students");
             System.out.println("3. Search Student");
             System.out.println("4. Update Marks");
-            System.out.println("5. Exit");
+            System.out.println("5. Sort by Marks");
+            System.out.println("6. Display Toppers");
+            System.out.println("7. Exit");
             System.out.print("Enter choice: ");
 
             int choice = sc.nextInt();
@@ -35,6 +37,14 @@ public class Main {
                     break;
 
                 case 5:
+                    StudentManagementSystem.sortByMarksDesc();
+                    break;
+
+                case 6:
+                    handleToppers(sc);
+                    break;
+
+                case 7:
                     System.out.println("Exiting...");
                     return;
 
@@ -44,9 +54,6 @@ public class Main {
         }
     }
 
-    // ===========================
-    // SEARCH HANDLER
-    // ===========================
     public static void handleSearch(Scanner sc) {
         System.out.println("\n1. Search by ID");
         System.out.println("2. Search by Name");
@@ -87,9 +94,6 @@ public class Main {
         }
     }
 
-    // ===========================
-    // UPDATE HANDLER
-    // ===========================
     public static void handleUpdate(Scanner sc) {
         System.out.print("Enter ID: ");
         int id = sc.nextInt();
@@ -99,5 +103,17 @@ public class Main {
 
         StudentManagementSystem.updateMarksById(id, marks);
 
+    }
+
+    public static void handleToppers(Scanner sc) {
+        System.out.print("Enter number of toppers to display: ");
+        int n = sc.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Invalid number!");
+            return;
+        }
+
+        StudentManagementSystem.displayToppers(n);
     }
 }
