@@ -27,14 +27,6 @@ A console-based Student Management System developed in Java. This project allows
     Environment: IntelliJ IDEA (or any Java IDE)
     Type: Console-based application
 
-->Project Structure
-Student-Management-System/
-│── src/
-│   ├── Student.java
-│   ├── StudentManagementSystem.java
-│   └── MainApp.java
-│── README.md
-
 ->How to Run
     Clone the repository:
     git clone <repository-url>
