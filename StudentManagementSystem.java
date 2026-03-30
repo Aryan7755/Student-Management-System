@@ -79,7 +79,7 @@ public class StudentManagementSystem {
             }
         });
 
-        System.out.println("✅ Students sorted by marks (highest first)");
+        System.out.println("Students sorted by marks (highest first)");
     }
 
     public static void displayToppers(int n) {
@@ -91,7 +91,7 @@ public class StudentManagementSystem {
         // ensure sorted before showing toppers
         sortByMarksDesc();
 
-        System.out.println("\n🏆 Top " + n + " Students:");
+        System.out.println("\nTop " + n + " Students:");
 
         for (int i = 0; i < Math.min(n, students.size()); i++) {
             System.out.println((i + 1) + ". " + students.get(i));
