@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class StudentManagementSystem {
     static ArrayList<Student> students = new ArrayList<>();
@@ -71,6 +69,17 @@ public class StudentManagementSystem {
         }
         s.setMarks(marks);
         System.out.println("Marks updated successfully!");
+    }
+
+    public static void sortByMarksDesc() {
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student s1, Student s2) {
+                return Double.compare(s2.getMarks(), s1.getMarks()); // descending
+            }
+        });
+
+        System.out.println("✅ Students sorted by marks (highest first)");
     }
 
 
