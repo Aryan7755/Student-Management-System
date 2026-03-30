@@ -82,6 +82,22 @@ public class StudentManagementSystem {
         System.out.println("✅ Students sorted by marks (highest first)");
     }
 
+    public static void displayToppers(int n) {
+        if (students.isEmpty()) {
+            System.out.println("No students available.");
+            return;
+        }
+
+        // ensure sorted before showing toppers
+        sortByMarksDesc();
+
+        System.out.println("\n🏆 Top " + n + " Students:");
+
+        for (int i = 0; i < Math.min(n, students.size()); i++) {
+            System.out.println((i + 1) + ". " + students.get(i));
+        }
+    }
+
 
 
 }
