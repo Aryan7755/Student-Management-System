@@ -6,7 +6,10 @@ public class StudentManagementSystem {
     public static void addStudent(Scanner sc) {
         System.out.print("Enter ID: ");
         int id = sc.nextInt();
-
+        if (searchById(id) != null) {
+            System.out.println("Student with this ID already exists!");
+            return;
+        }
         sc.nextLine(); // consume newline
 
         System.out.print("Enter Name: ");
@@ -18,7 +21,7 @@ public class StudentManagementSystem {
         Student s = new Student(id, name, marks);
         students.add(s);
 
-        System.out.println("✅ Student added successfully!");
+        System.out.println("Student added successfully!");
     }
 
     public static void displayStudents() {
